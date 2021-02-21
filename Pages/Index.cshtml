@@ -1,0 +1,17 @@
+﻿@page
+@model Erpha.Pages.IndexModel
+@{
+}
+<h4>The Erpha Works</h4>
+<hr/>
+<h4>Meta</h4>
+<p>@Model.AppValue.Name</p>
+<p>@Model.AppValue.Author</p>
+<p>Total cities @Model.AppValue.Cities.Count()</p>
+<select>
+    @foreach (var c in Model.AppValue.Cities)
+    {
+        <option>@c</option>
+
+    }
+</select>
